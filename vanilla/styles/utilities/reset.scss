@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: none;
+  background-color: $gray-lighter;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline-style: none;
+}

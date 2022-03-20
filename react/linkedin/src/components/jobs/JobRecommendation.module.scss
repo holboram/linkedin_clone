@@ -1,0 +1,80 @@
+@import '../../styles/variables.scss';
+
+li:last-child {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+}
+
+.wrapper-center {
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-bottom: 1px solid #eae9e8;
+    padding: 16px;
+    cursor: pointer;
+  }
+  &__list-item:hover strong {
+    text-decoration: underline 0.1px;
+  }
+
+  &__users-posts {
+    display: flex;
+    margin-bottom: 6px;
+  }
+
+  &__text-wrapper {
+    margin: 4px 12px 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 400px;
+    strong {
+      color: $blue-navy;
+      font-size: $font-size-l;
+    }
+  }
+
+  &__about-summary {
+    margin-top: 4px;
+    color: $gray;
+    line-height: 0.9;
+    font-size: $font-size-normal;
+    svg {
+      fill: green;
+    }
+    &--flex {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      font-size: $font-size-s;
+    }
+  }
+
+  &__date {
+    color: $gray;
+    font-size: $font-size-xs;
+  }
+
+  &__bookmark-btn {
+    align-self: flex-start;
+    padding-top: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    svg {
+      fill: $gray;
+    }
+  }
+}
+
+.wrapper-right__image-profile {
+  border-radius: $border-radius-nav;
+  -webkit-border-radius: $border-radius-nav;
+  -moz-border-radius: $border-radius-nav;
+  -ms-border-radius: $border-radius-nav;
+  -o-border-radius: $border-radius-nav;
+  margin-right: 12px;
+}

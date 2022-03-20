@@ -1,0 +1,110 @@
+@import '../../styles/variables.scss';
+
+.wrapper-center {
+  &__comment {
+    display: flex;
+    margin: 10px 0;
+  }
+
+  &__comment-header {
+    display: flex;
+    padding-bottom: 8px;
+  }
+
+  &__comment-user-img {
+    align-self: flex-start;
+    border-radius: 50%;
+  }
+
+  &__comment-header-background {
+    margin-left: 4px;
+    background-color: $gray-lighter;
+    padding: 8px 16px 12px 12px;
+    border-radius: $border-radius;
+    border-top-left-radius: 0px;
+  }
+
+  &__name {
+    font-size: $font-size-s;
+    font-weight: bold;
+  }
+
+  &__profession {
+    font-size: $font-size-s;
+    color: $gray;
+  }
+
+  &__time-wrapper {
+    margin-left: auto;
+  }
+
+  &__time {
+    margin-right: 4px;
+    font-size: $font-size-s;
+    color: $gray;
+    svg {
+      color: $gray;
+    }
+  }
+
+  &__name-profession {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__comment-social-actions {
+    display: flex;
+    // margin-top: 4px;
+    // margin-left: 15px;
+    margin: 4px 0 0 15px;
+    padding-left: 8px;
+  }
+
+  &__like-container {
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__no-likes {
+    display: flex;
+    align-items: center;
+  }
+
+  &__reply-container {
+    padding: 0 8px;
+  }
+
+  &__dot-divider {
+    padding: 0 8px;
+  }
+
+  &__social-divider {
+    height: 16px;
+    border-left: 1px solid $gray-light;
+  }
+
+  &__like-btn,
+  &__reply-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: $border-radius;
+  }
+
+  &__btn-txt {
+    font-weight: bold;
+    color: $gray;
+    padding: 5px;
+  }
+
+  &__like-btn:hover,
+  &__reply-btn:hover {
+    background-color: $gray-lighter;
+  }
+
+  &__no-likes,
+  &__no-replies {
+    font-size: $font-size-s;
+  }
+}

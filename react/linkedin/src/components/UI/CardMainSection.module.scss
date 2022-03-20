@@ -1,0 +1,18 @@
+.main-section {
+  background-color: #f3f2ef;
+  padding: 40px 30px;
+  @media screen and (max-width: 1128px) {
+    padding: 20px 30px;
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  gap: 20px;
+  max-width: 1128px;
+  margin: 0 auto;
+  @media screen and (max-width: 708px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

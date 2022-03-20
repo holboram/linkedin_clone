@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.card {
+  overflow: auto;
+  border: 1px solid $gray-lighter;
+  min-width: 220px;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+  background-color: white;
+  flex-grow: 1;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semi-bold;
+  @media screen and (max-width: 1128px) {
+    min-width: 200px;
+  }
+}

@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.wrapper-left {
+  &__nav-item {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    @media screen and (max-width: 708px) {
+      margin-top: 0;
+    }
+  }
+
+  &__svg {
+    fill: $gray;
+  }
+
+  &__nav-text {
+    color: $black-light;
+    font-size: $font-size-normal;
+    margin-left: 10px;
+  }
+
+  &__list-item {
+    @media screen and (max-width: 708px) {
+      display: none;
+    }
+  }
+
+  &__list-item:first-child {
+    @media screen and (max-width: 708px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+// &__dropdown-menu {
+//   cursor: pointer;
+//   display: none;
+//   align-self: flex-end;
+//   padding: 3px 8px;
+//   margin-right: 4px;
+
+//   &:hover {
+//     background: $gray-background;
+//   }
+
+//   @media screen and (max-width: 708px) {
+//     display: flex;
+//   }
+
+//   span {
+//     color: $black-light;
+//     font-size: $font-size-normal;
+//   }
+
+//   svg {
+//     margin-left: 10px;
+//   }
+// }

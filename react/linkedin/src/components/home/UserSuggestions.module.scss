@@ -1,0 +1,68 @@
+@import '../../styles/variables.scss';
+
+.wrapper-right {
+  &__user-suggestion {
+    display: flex;
+    margin: 20px 0;
+  }
+
+  &__image-profile {
+    border-radius: $border-radius-nav;
+    -webkit-border-radius: $border-radius-nav;
+    -moz-border-radius: $border-radius-nav;
+    -ms-border-radius: $border-radius-nav;
+    -o-border-radius: $border-radius-nav;
+    margin-right: 12px;
+  }
+
+  &__users-feed {
+    button {
+      border: 0.5px solid $gray-light;
+      border-radius: $border-radius-post-btn;
+      -webkit-border-radius: $border-radius-post-btn;
+      -moz-border-radius: $border-radius-post-btn;
+      -ms-border-radius: $border-radius-post-btn;
+      -o-border-radius: $border-radius-post-btn;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      outline: none;
+      overflow: hidden;
+      padding: 0 15px;
+      font-size: $font-size-normal;
+      font-weight: $font-weight-bold;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 2rem;
+      color: $gray;
+      &:hover {
+        background-color: $gray-background;
+        transition: 200ms;
+        -webkit-transition: 200ms;
+        -moz-transition: 200ms;
+        -ms-transition: 200ms;
+        -o-transition: 200ms;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__name {
+    color: $black;
+    font-size: $font-size-normal;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  &__intro {
+    font-size: $font-size-s;
+    color: $gray;
+    margin: 2px 0;
+    &--margin {
+      margin: 2px 0;
+    }
+  }
+}

@@ -1,0 +1,210 @@
+@import '../../styles/variables';
+@import '../../styles/common';
+
+.main-section {
+  background-color: $gray-background;
+  padding: 40px 30px;
+  @media screen and (max-width: 1128px) {
+    padding: 20px 30px;
+  }
+}
+
+.main-wrapper {
+  overflow: auto;
+  display: flex;
+  gap: 20px;
+  max-width: 1128px;
+  margin: 0 auto;
+  @media screen and (max-width: 708px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.wrapper-left {
+  position: sticky;
+  top: 5px;
+  min-width: 29%;
+  height: 92vh;
+  flex-basis: 0;
+  border: 1px solid $gray-lighter;
+  padding: 8px 0;
+  background-color: white;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+  h2 {
+    margin: 4px 16px;
+    font-size: $font-size-m;
+    font-weight: $font-weight-regular;
+  }
+
+  &__show-more-container {
+    cursor: pointer;
+    padding: 0px 12px;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semi-bold;
+    display: flex;
+    align-items: center;
+    color: $gray;
+    svg {
+      margin-left: 10px;
+    }
+  }
+
+  &__show-more {
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-m;
+    font-weight: $font-weight-bold;
+    &:hover {
+      background-color: #f3f2ef;
+      transition: 200ms;
+      -webkit-transition: 200ms;
+      -moz-transition: 200ms;
+      -ms-transition: 200ms;
+      -o-transition: 200ms;
+    }
+  }
+
+  &__ad-link {
+    margin-top: 8px;
+    border-top: 1px solid $gray-lighter;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    header {
+      text-align: center;
+      font-size: $font-size-s;
+      font-weight: $font-weight-regular;
+      color: $gray;
+    }
+    h2 {
+      text-align: center;
+      font-size: $font-size-normal;
+      color: $black-light;
+    }
+    main {
+      img:first-child {
+        margin-right: 5px;
+        border-radius: $border-radius-nav;
+        -webkit-border-radius: $border-radius-nav;
+        -moz-border-radius: $border-radius-nav;
+        -ms-border-radius: $border-radius-nav;
+        -o-border-radius: $border-radius-nav;
+      }
+      img:last-child {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__ad-dots-container {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 7px;
+    }
+  }
+
+  &__grow-network-container {
+    border-top: 1px solid $gray-lighter;
+    padding: 4px 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    a {
+      font-size: $font-size-m;
+      font-weight: $font-weight-bold;
+      color: $blue-navy;
+      line-height: 2rem;
+      &:hover {
+        text-decoration: underline solid $blue-navy;
+      }
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid $gray-lighter;
+    padding: 0 24px 4px;
+  }
+
+  &__links-container {
+    margin: 16px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3px;
+    li:nth-child(4) {
+      svg {
+        top: 20px;
+      }
+    }
+    li > a {
+      margin: 10px;
+      color: $gray;
+      font-size: $font-size-xs;
+      &:hover {
+        color: $blue-navy;
+        text-decoration: underline solid $blue-navy;
+      }
+    }
+  }
+
+  &__trade-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-xs;
+    svg {
+      fill: $blue-navy;
+    }
+  }
+}
+
+.wrapper-main {
+  &__manage-invitations {
+    border: 1px solid $gray-lighter;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 8px 8px 8px 16px;
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+    h2 {
+      font-size: $font-size-m;
+      font-weight: $font-weight-regular;
+    }
+    a {
+      font-size: $font-size-m;
+      font-weight: $font-weight-bold;
+      color: $gray;
+      padding: 6px 8px;
+      &:hover {
+        background: $gray-background;
+      }
+    }
+  }
+
+  &__parent-container {
+    border: 1px solid $gray-lighter;
+    background-color: white;
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+  }
+}

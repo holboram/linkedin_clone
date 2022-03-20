@@ -1,0 +1,151 @@
+@import '../../styles/variables.scss';
+
+.main-section {
+  height: 100vh;
+  background-color: #f3f2ef;
+  padding: 40px 30px;
+  @media screen and (max-width: 1128px) {
+    padding: 20px 30px;
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  gap: 20px;
+  max-width: 1128px;
+  margin: 0 auto;
+  @media screen and (max-width: 708px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__show-btn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    color: $gray;
+    font-weight: 600;
+    svg {
+      margin-left: 5px;
+    }
+    &--hide {
+      display: none;
+    }
+    &:hover {
+      background-color: rgba(102, 102, 102, 0.3);
+    }
+    @media screen and (max-width: 708px) {
+      display: flex;
+    }
+  }
+}
+
+.wrapper-center-right {
+  display: flex;
+  gap: 20px;
+  @media screen and (max-width: 1128px) {
+    flex-direction: column;
+  }
+}
+
+.wrapper-center {
+  width: 155%;
+
+  &__feed-list {
+    border: 1px solid $gray-lighter;
+    background-color: white;
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+  }
+
+  &__list-item {
+    border: none;
+    border-top: 1px solid $gray-lighter;
+    background: transparent;
+    flex-direction: row;
+    padding: 16px 12px 16px 24px;
+    margin-bottom: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__header-width {
+    width: 85%;
+  }
+
+  &__btn {
+    display: flex;
+    svg {
+      fill: $gray;
+      text-align: right;
+    }
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__text-wrapper {
+    margin: 4px 12px 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__about-summary {
+    margin-top: 4px;
+    color: $black-light;
+  }
+
+  &__date {
+    color: $gray;
+    font-size: $font-size-xs;
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    svg {
+      fill: $gray;
+    }
+  }
+
+  @media screen and (max-width: 1128px) {
+    width: auto;
+  }
+}
+
+.wrapper-right {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $gray-lighter;
+  max-width: 30%;
+  flex-grow: 2;
+
+  @media screen and (max-width: 1128px) {
+    max-width: 100%;
+  }
+
+  &__image-profile {
+    border-radius: $border-radius-nav;
+    -webkit-border-radius: $border-radius-nav;
+    -moz-border-radius: $border-radius-nav;
+    -ms-border-radius: $border-radius-nav;
+    -o-border-radius: $border-radius-nav;
+    margin-right: 12px;
+  }
+}

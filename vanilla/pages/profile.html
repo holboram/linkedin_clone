@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+  <link rel="stylesheet" type="text/css" href="../styles/profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,500&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+  <!-- Modal Contact Info-->
+  <div class="wrapper__modal wrapper__modal--hidden">
+    <div class="wrapper__modal-header">
+      <h2 class='wrapper__modal-user-name'></h2>
+      <button class="wrapper__modal-close-btn">&times;</button>
+    </div>
+    <div class="wrapper__modal-body">
+      <div class="wrapper__modal-info">
+        <h2>Contact Info</h2>
+        <button class='wrapper__modal-edit-btn'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+            <path d="M21.13 2.86a3 3 0 00-4.17 0l-13 13L2 22l6.19-2L21.13 7a3 3 0 000-4.16zM6.77 18.57l-1.35-1.34L16.64 6 18 7.35z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="wrapper__modal-info-details">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+          <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+        </svg>
+        <div class="wrapper__modal-info-body">
+          <h3>Your Profile</h3>
+          <a id='profile'></a>
+        </div>
+      </div>
+      <div class="wrapper__modal-info-details">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path d="M21.7 19.18l-1.92 1.92a3.07 3.07 0 01-3.33.67 25.52 25.52 0 01-8.59-5.63 25.52 25.52 0 01-5.63-8.59 3.07 3.07 0 01.67-3.33L4.82 2.3a1 1 0 011.41 0l3.15 3.11A1.1 1.1 0 019.41 7L7.59 8.73a20.51 20.51 0 007.68 7.68l1.78-1.79a1.1 1.1 0 011.54 0l3.11 3.11a1 1 0 010 1.41z"></path>
+        </svg>
+        <div class="wrapper__modal-info-body">
+          <h3>Phone</h3>
+          <span id='phone-no'></span>&nbsp;(<span id='phone-type'></span>)
+        </div>
+      </div>
+      <div class="wrapper__modal-info-details">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path d="M12 2a7 7 0 00-6.1 10.43L12 23l6.1-10.57A7 7 0 0012 2zm0 10a3 3 0 113-3 3 3 0 01-3 3z"></path>
+        </svg>
+        <div class="wrapper__modal-info-body">
+          <h3>Address</h3>
+          <a href="#" id='address'></a>
+        </div>
+      </div>
+      <div class="wrapper__modal-info-details">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path d="M2 4v13a3 3 0 003 3h14a3 3 0 003-3V4zm18 2v1.47l-8 5.33-8-5.33V6zm-1 12H5a1 1 0 01-1-1V8.67L12 14l8-5.33V17a1 1 0 01-1 1z"></path>
+        </svg>
+        <div class="wrapper__modal-info-body">
+          <h3>Email</h3>
+          <a id='email'></a>
+        </div>
+      </div>
+      <div class="wrapper__modal-info-details">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+          <path d="M21 18V9a1 1 0 00-1-1h-2V4h-2v4h-3V4h-2v4H8V4H6v4H4a1 1 0 00-1 1v9H2v2h20v-2h-1zm-2-8v3H5v-3h14zM5 14h14v4H5v-4z"></path>
+        </svg>
+        <div class="wrapper__modal-info-body">
+          <h3>Birthday</h3>
+          <span id='month'></span>&emsp;<span id='day'></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Edit Contact Info -->
+  <div class="wrapper-contact__modal wrapper-contact__modal--hidden">
+    <!-- <div class="wrapper-contact__modal"> -->
+    <div class="wrapper-contact__modal-header">
+      <h2>Edit contact info</h2>
+      <button class="wrapper-contact__modal-close-btn">&times;</button>
+    </div>
+    <form class="wrapper-contact__modal-form" id='edit-form' name='edit-form'>
+      <div class='wrapper-contact__modal-url'>
+        <label for='profileURL'>Profile URL</label>
+        <a id='profile-edit'></a>
+      </div>
+      <div class='wrapper-contact__modal-phone'>
+        <label for='phone'>Phone</label>
+        <div class='wrapper-contact__modal-phone-values'>
+          <input type='text' id='phone-edit' list='phones' name='phone' value='0747424070'></input>
+          <select id='phone-type' name='phones'>
+            <option id='phone-types' value='Home'>Home</option>
+            <option id='phone-types' value='Work'>Work</option>
+            <option id='phone-types' value='Mobile'>Mobile</option>
+          </select>
+        </div>
+      </div>
+      <div class='wrapper-contact__modal-address'>
+        <label for='address'>Address</label>
+        <textarea id='address-edit' name='address'></textarea>
+      </div>
+      <div class='wrapper-contact__modal-email'>
+        <label for='email'>Email address</label>
+        <a id='email-edit' name='email'></a>
+      </div>
+
+      <div class='wrapper-contact__modal-birthday'>
+        <label for='month'>Birthday</label>
+        <div class='wrapper-contact__modal-dates'>
+          <select id='month' name='month'>
+            <option class='month-edit' value='' disabled hidden>Month</option>
+            <option class='month-edit' value='January'>January</option>
+            <option class='month-edit' value='February'>February</option>
+            <option class='month-edit' value='March'>March</option>
+            <option class='month-edit' value='April'>April</option>
+            <option class='month-edit' value='May'>May</option>
+            <option class='month-edit' value='June'>June</option>
+            <option class='month-edit' value='July'>July</option>
+            <option class='month-edit' value='August'>August</option>
+            <option class='month-edit' value='September'>September</option>
+            <option class='month-edit' value='October'>October</option>
+            <option class='month-edit' value='November'>November</option>
+            <option class='month-edit' value='December'>December</option>
+          </select>
+
+
+          <select id='day' name='day'>
+            <option class='day-edit' value=''>Day</option>
+            <option class='day-edit' value='1'>1</option>
+            <option class='day-edit' value='2'>2</option>
+            <option class='day-edit' value='3'>3</option>
+            <option class='day-edit' value='4'>4</option>
+            <option class='day-edit' value='5'>5</option>
+            <option class='day-edit' value='6'>6</option>
+            <option class='day-edit' value='7'>7</option>
+            <option class='day-edit' value='8'>8</option>
+            <option class='day-edit' value='9'>9</option>
+            <option class='day-edit' value='10'>10</option>
+            <option class='day-edit' value='11'>11</option>
+            <option class='day-edit' value='12'>12</option>
+            <option class='day-edit' value='13'>13</option>
+            <option class='day-edit' value='14'>14</option>
+            <option class='day-edit' value='15'>15</option>
+            <option class='day-edit' value='16'>16</option>
+            <option class='day-edit' value='17'>17</option>
+            <option class='day-edit' value='18'>18</option>
+            <option class='day-edit' value='19'>19</option>
+            <option class='day-edit' value='20'>20</option>
+            <option class='day-edit' value='21'>21</option>
+            <option class='day-edit' value='22'>22</option>
+            <option class='day-edit' value='23'>23</option>
+            <option class='day-edit' value='24'>24</option>
+            <option class='day-edit' value='25'>25</option>
+            <option class='day-edit' value='26'>26</option>
+            <option class='day-edit' value='27'>27</option>
+            <option class='day-edit' value='28'>28</option>
+            <option class='day-edit' value='29'>29</option>
+            <option class='day-edit' value='30'>30</option>
+            <option class='day-edit' value='31'>31</option>
+          </select>
+        </div>
+      </div>
+    </form>
+    <div class='wrapper-contact__modal-save'>
+      <button id='save-btn'>Save</button>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <section class="header-section" id="nav"></section>
+
+  <!-- Main Section -->
+  <section class="main-section">
+    <div class="main-wrapper">
+      <!-- Article -->
+      <article class="wrapper-left">
+        <div class="wrapper-left__name">
+          <div class="wrapper-left__profile-container">
+            <div class="wrapper-left__image-background"></div>
+            <a href="#" class="wrapper-left__upload-img">
+              <img width="160" src="../assets/FB_IMG_1588881980469.jpg" class="wrapper-left__avatar-image" />
+            </a>
+            <div class="wrapper-left__info-container">
+              <div class="wrapper-left__user-info">
+                <h1 class='wrapper-left__profile-name'></h1>
+                <p class="wrapper-left__profession">Frontend Web Developer</p>
+                <span class="wrapper-left__contact-area">Iasi &#8231; <a href="#" class='wrapper-left__contact-btn'>Contact info</a></span>
+                <a href="#" class="wrapper-left__contact-connections">25 connections</a>
+                <div class="wrapper-left__cta-btns">
+                  <button class="wrapper-left__cta-btn wrapper-left__cta-btn--primary">Open to</button>
+                  <button class="wrapper-left__cta-btn">Add section</button>
+                  <button class="wrapper-left__cta-btn">More</button>
+                </div>
+              </div>
+              <div class="wrapper-left__exprerience">
+                <a class="wrapper-left__experience-link"><img width="32px" src="../assets/tetedoie.jpeg" />Maison Christian TETEDOIE</a>
+                <a class="wrapper-left__experience-link"><img width="32px" src="../assets/openclassrooms.png" />OpenClassrooms</a>
+              </div>
+            </div>
+            <div class="wrapper-left__open-to-container">
+              <a class="wrapper-left__open-to-wrapper" href="#">
+                <h3><strong>Open to work</strong></h3>
+                <p>Frontend Web Developer</p>
+                <p>See all details</p>
+              </a>
+              <svg class="wrapper-left__pen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false">
+                <path d="M14.13 1.86a3 3 0 00-4.17 0l-7 7L1 15l6.19-2 6.94-7a3 3 0 000-4.16zm-8.36 9.71l-1.35-1.34L9.64 5 11 6.35z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="wrapper-left__about">
+            <h2>About</h2>
+            <p class="wrapper-left__text-about">
+              After having different professional experiences in various industries I decided that web development is
+              the path I want to take. Therefore I passed a course in web development to start my new career.
+              Dedication, pugnacity and curiosity define my mind set, I then would like to enter a company where I
+              ca<span class="wrapper-left__dots">...<button class="wrapper-left__see-more-btn">see more</button></span>
+              <span class="wrapper-left__more">n share my skills and develop new ones. Getting a web development position would be the stepping
+                stone to this new professional adventure. My goal is to become a professional web developer and to
+                help companies achieving their goal by using my knowledge in React.JS, JavaScript, CSS3 and HTML5.
+                Even though I have no experience, I worked on small projects of my own in which I gained invaluable
+                experience.</span>
+            </p>
+          </div>
+          <div class="wrapper-left__about wrapper-left__about--no-radius-bottom">
+            <h2>Activity</h2>
+            <p class="wrapper-left__text-about">
+              Posts you created, shared, or commented on in the last 90 days are displayed here.
+            </p>
+          </div>
+          <div class="wrapper-left__about wrapper-left__about--no-margin-top">
+            <button>See all activity</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Aside Right -->
+      <aside class="wrapper-right">
+        <div class="wrapper-right__top-container">
+          <div class="wrapper-right__edit-profile">
+            <a href="#" class="wrapper-right__edit-profile-link">
+              <span class="wrapper-right__edit-profile-text">Edit public profile & URL</span>
+            </a>
+            <span>
+              <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="wrapper-right__question-mark" width="16" height="16" focusable="false">
+                <path d="M8 1a7 7 0 107 7 7 7 0 00-7-7zm0 11.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zM8.82 9H7v-.95l.93-.46C8.64 7.24 9 6.89 9 6.6S8.57 6 8 6a6.49 6.49 0 00-3 .91V4.84A6.35 6.35 0 018.1 4c2 0 2.9 1 2.9 2.4 0 .9-.5 1.83-2.18 2.6z"></path>
+              </svg>
+            </span>
+          </div>
+          <hr />
+          <div class="wrapper-right__edit-profile">
+            <a href="#" class="wrapper-right__edit-profile-link">
+              <span class="wrapper-right__edit-profile-text">Add profile in another language</span>
+            </a>
+            <span>
+              <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="wrapper-right__question-mark" width="16" height="16" focusable="false">
+                <path d="M8 1a7 7 0 107 7 7 7 0 00-7-7zm0 11.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zM8.82 9H7v-.95l.93-.46C8.64 7.24 9 6.89 9 6.6S8.57 6 8 6a6.49 6.49 0 00-3 .91V4.84A6.35 6.35 0 018.1 4c2 0 2.9 1 2.9 2.4 0 .9-.5 1.83-2.18 2.6z"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <ul>
+          <h2>People also viewed</h2>
+          <li>
+            <a href="#"><img src="../assets/FB_IMG_1588881980469.jpg" width="48" class="wrapper-right__image-profile" /></a>
+            <div class="wrapper-right__users-feed">
+              <a href="#">
+                <span class="wrapper-right__name">Lex Fridman</span>
+                <p class="wrapper-right__intro">AI researcher. Podcast host.</p>
+              </a>
+              <button>Connect</button>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img src="../assets/FB_IMG_1588881980469.jpg" width="48" class="wrapper-right__image-profile" /></a>
+            <div class="wrapper-right__users-feed">
+              <a href="#">
+                <span class="wrapper-right__name">Lex Fridman</span>
+                <p class="wrapper-right__intro">AI researcher. Podcast host.</p>
+              </a>
+              <button>Connect</button>
+            </div>
+          </li>
+        </ul>
+        <a class="wrapper-right__show-more">Show more
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+            <path d="M1 5l7 4.61L15 5v2.39L8 12 1 7.39z"></path>
+          </svg>
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- JS SCripts -->
+  <script type="module" src="../js/common/overlay.js"></script>
+  <script type="module" src="../js/common/nav.js"></script>
+  <script type="module" src="../js/profile/profile.js"></script>
+</body>
+
+</html>

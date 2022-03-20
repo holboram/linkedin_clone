@@ -1,0 +1,140 @@
+@import 'main.scss';
+
+.wrapper-left {
+  position: sticky;
+  top: 70px;
+  background: transparent;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 708px) {
+    &__title {
+      display: none;
+    }
+  }
+
+  &__title {
+    background: white;
+    padding: 16px;
+    h3 {
+      font-size: $font-size-m;
+    }
+    p {
+      color: $gray;
+      margin-top: 8px;
+      line-height: 25px;
+      font-size: $font-size-m;
+      font-weight: $font-weight-regular;
+    }
+  }
+
+  &__settings-summary {
+    border-top: 1px solid $gray-lighter;
+    background: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 708px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    svg {
+      display: none;
+      margin-right: 5px;
+      fill: $gray;
+      @media screen and (max-width: 708px) {
+        display: block;
+      }
+    }
+
+    span {
+      font-size: $font-size-normal;
+      font-weight: $font-weight-regular;
+      color: $gray;
+    }
+    a {
+      cursor: pointer;
+      font-size: $font-size-m;
+      letter-spacing: 0.5px;
+      color: $blue-navy;
+      @media screen and (max-width: 708px) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__ad-link {
+    margin-top: 0;
+    position: sticky;
+    top: 70px;
+  }
+
+  &__footer {
+    position: sticky;
+    top: 350px;
+  }
+}
+
+.wrapper-center {
+  width: 155%;
+  &__feed-list {
+    border: 1px solid $gray-lighter;
+    background-color: white;
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+  }
+
+  &__list-item {
+    border: none;
+    border-top: 1px solid $gray-lighter;
+    background: transparent;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 12px 16px 24px;
+    margin-bottom: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+  &__users-posts {
+    align-items: center;
+  }
+
+  &__text-wrapper {
+    margin: 4px 12px 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__about-summary {
+    margin-top: 4px;
+    color: $gray;
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $gray;
+    font-size: $font-size-xs;
+    gap: 10px;
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    svg {
+      fill: $gray;
+    }
+  }
+
+  @media screen and (max-width: 1128px) {
+    width: auto;
+  }
+}

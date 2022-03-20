@@ -1,0 +1,101 @@
+@import '../../styles/variables.scss';
+
+.height {
+  height: auto;
+}
+
+.wrapper-left {
+  position: sticky;
+  top: 70px;
+  background: transparent;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 708px) {
+    &__title {
+      display: none;
+    }
+  }
+
+  &__title {
+    background: white;
+    padding: 16px;
+    h3 {
+      font-size: $font-size-m;
+    }
+    p {
+      color: $gray;
+      margin-top: 8px;
+      line-height: 25px;
+      font-size: $font-size-m;
+      font-weight: $font-weight-regular;
+    }
+  }
+
+  &__settings-summary {
+    border-top: 1px solid $gray-lighter;
+    background: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 708px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    svg {
+      display: none;
+      margin-right: 5px;
+      fill: $gray;
+      @media screen and (max-width: 708px) {
+        display: block;
+      }
+    }
+
+    span {
+      font-size: $font-size-normal;
+      font-weight: $font-weight-regular;
+      color: $gray;
+    }
+    a {
+      cursor: pointer;
+      font-size: $font-size-m;
+      letter-spacing: 0.5px;
+      color: $blue-navy;
+      @media screen and (max-width: 708px) {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.wrapper-center {
+  width: 155%;
+  &__feed-list {
+    border: 1px solid $gray-lighter;
+    background-color: white;
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+  }
+
+  @media screen and (max-width: 1128px) {
+    width: auto;
+  }
+}
+
+.wrapper-center-right {
+  display: flex;
+  gap: 20px;
+  @media screen and (max-width: 1128px) {
+    flex-direction: column;
+  }
+}
+
+.wrapper-right {
+  &__transparent {
+    background: transparent;
+  }
+}

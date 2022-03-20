@@ -1,0 +1,40 @@
+@import '../styles/variables.scss';
+
+.wrapper-left__links-container {
+  margin: 16px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  li {
+  }
+  li:nth-child(4) {
+    svg {
+      top: 20px;
+    }
+  }
+  li > a {
+    margin: 0 3px;
+    color: $gray;
+    font-size: $font-size-xs;
+    &:hover {
+      color: $blue-navy;
+      text-decoration: underline solid $blue-navy;
+    }
+  }
+}
+
+.wrapper-left__trade-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-xs;
+  svg {
+    fill: $blue-navy;
+  }
+}
+
+.wrapper-left__footer {
+  padding: 0 24px 4px;
+}

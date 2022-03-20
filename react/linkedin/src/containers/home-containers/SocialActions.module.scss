@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+
+.wrapper-center {
+  &__social-counts {
+    padding: 8px 0;
+    border-bottom: 1px $gray-lighter solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__likes {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px;
+  }
+
+  &__no-comments {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__no-comments:hover {
+    color: $blue-navy;
+    text-decoration: underline;
+  }
+
+  &__btn-social {
+    padding: 10px 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: $gray;
+    span {
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semi-bold;
+    }
+  }
+
+  &__btn-social:hover {
+    background-color: $gray-lighter;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+.wrapper-center {
+  &__option-delete {
+    position: absolute;
+    right: 40px;
+    top: -5px;
+    button {
+      background: transparent;
+      padding: 4px;
+      font-size: $font-size-s;
+      color: $gray;
+      font-weight: $font-weight-semi-bold;
+      border: 0.5px solid $gray-light;
+      cursor: pointer;
+    }
+  }
+}

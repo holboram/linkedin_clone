@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.btn-share {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  padding: 0 8px;
+  min-height: 76.8px;
+  line-height: 44.8px;
+  color: $gray;
+  font-size: $font-size-s;
+  font-weight: $font-weight-bold;
+}
+
+.svg {
+  margin-right: 10px;
+}

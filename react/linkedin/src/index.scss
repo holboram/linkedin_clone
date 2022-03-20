@@ -1,0 +1,35 @@
+@import "styles/variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: none;
+  background-color: $gray-lighter;
+}
+
+img {
+  object-fit: scale-down;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline-style: none;
+}

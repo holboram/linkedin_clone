@@ -1,0 +1,103 @@
+@import '../../styles/variables.scss';
+
+.wrapper-right {
+  &__list-element {
+    display: flex;
+    margin: 15px 0;
+  }
+
+  &__image-profile {
+    border-radius: $border-radius-nav;
+    -webkit-border-radius: $border-radius-nav;
+    -moz-border-radius: $border-radius-nav;
+    -ms-border-radius: $border-radius-nav;
+    -o-border-radius: $border-radius-nav;
+    margin-right: 12px;
+  }
+
+  &__info-icon {
+    fill: $gray;
+    position: relative;
+  }
+
+  &__name {
+    font-size: $font-size-s;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  &__intro {
+    font-size: $font-size-xxs;
+    color: $gray;
+    margin: 5px 0;
+    &--margin {
+      margin: 2px 0;
+    }
+  }
+
+  &__users-feed {
+    button {
+      box-sizing: border-box;
+      border: 0.5px solid $gray-light;
+      border-radius: $border-radius-post-btn;
+      -webkit-border-radius: $border-radius-post-btn;
+      -moz-border-radius: $border-radius-post-btn;
+      -ms-border-radius: $border-radius-post-btn;
+      -o-border-radius: $border-radius-post-btn;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      outline: none;
+      overflow: hidden;
+      padding: 0 15px;
+      font-size: $font-size-normal;
+      font-weight: $font-weight-semi-bold;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 2rem;
+      color: $gray;
+      &:hover {
+        background-color: $gray-lighter;
+        transition: 200ms;
+        -webkit-transition: 200ms;
+        -moz-transition: 200ms;
+        -ms-transition: 200ms;
+        -o-transition: 200ms;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__show-more {
+    border-left: 1px solid $gray-lighter;
+    border-right: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
+    background-color: white;
+    height: 35px;
+    display: inline-block;
+    justify-content: center;
+    cursor: pointer;
+    max-width: 480px;
+    padding: 2px 8px;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semi-bold;
+    display: flex;
+    align-items: center;
+    color: $gray;
+    border-radius: 0 0 10px 10px;
+    svg {
+      padding-left: 5px;
+    }
+    &:hover {
+      background-color: $gray-lighter;
+      transition: 200ms;
+      -webkit-transition: 200ms;
+      -moz-transition: 200ms;
+      -ms-transition: 200ms;
+      -o-transition: 200ms;
+    }
+  }
+}

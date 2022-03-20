@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Ninja",
+    "profession": "dev",
+    "age": 41,
+    "image": "/images/FB_IMG_1588881980469.jpg",
+    "following": [1, 2, 3],
+    "about": "I am a highly motivated creative copywriter, content manager and digital marketer with a diverse portfolio that includes product copywriting, agency copywriting, video production and public relations, I have experience in both inbound and outbound marketing. I have also worked in the music industry, spending five years in music public relations. In my spare time I have reviewed film, television, music and video games for a number of online publications, including the award winning 405 Music and Culture Magazine",
+    "open": "Frontend Developer",
+    "phone": { "no": "0747424070", "type": "Work" },
+    "address": "is",
+    "birthday": { "month": "April", "day": "1" },
+    "email": "holbora@yahoo.com",
+    "profileLink": "linkedin.com/in/mariusholbora"
+  },
+  {
+    "id": 2,
+    "name": "Alexander",
+    "profession": "doc",
+    "age": 36,
+    "image": "/images/art-hauntington-jzY0KRJopEI-unsplash.jpg",
+    "following": [2, 1, 3],
+    "about": "After having different professional experiences in various industries I decided that web development is the path I want to take. Therefore I passed a course in web development to start my new career. Dedication, pugnacity and curiosity define my mind set, I then would like to enter a company where I ca n share my skills and develop new ones. Getting a web development position would be the stepping stone to this new professional adventure. My goal is to become a professional web developer and to help companies achieving their goal by using my knowledge in React.JS, JavaScript, CSS3 and HTML5. Even though I have no experience, I worked on small projects of my own in which I gained invaluable experience.",
+    "open": "Developer Roles",
+    "phone": { "no": 56565, "type": "Home" },
+    "address": "Iasi",
+    "birthday": { "month": "January", "day": "2" },
+    "email": "bau@yahoo.com",
+    "profileLink": "linkedin.com/in/john"
+  },
+  {
+    "id": 3,
+    "name": "Alex",
+    "profession": "manager",
+    "age": 45,
+    "image": "/images/jessica-felicio-_cvwXhGqG-o-unsplash.jpg",
+    "following": [3, 2],
+    "about": "I am an experienced finance professional with a background in management accounting and tax planning, as well as a developing knowledge and interest in financial modelling. I am an excellent hands-on, focused, team player but also happy to work individually. I am a good communicator who is comfortable with engaging with all levels of staff including directors and executive management. I am adaptable and comfortable working in a range of environments and have experience in international, cosmopolitan teams in mid-size and large organisation.",
+    "open": "Accountant",
+    "phone": { "no": 744424396, "type": "Work" },
+    "address": "Arad, Romania",
+    "birthday": { "month": "July", "day": "23" },
+    "email": "sandra@gmail.com",
+    "profileLink": "linkedin.com/in/sandra"
+  }
+]

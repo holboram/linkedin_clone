@@ -1,0 +1,111 @@
+@import '../../styles/variables.scss';
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.wrapper {
+  &__modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    max-width: 552px;
+    border-radius: $border-radius;
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__modal-header {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 48px 8px 12px;
+    border-bottom: 0.2px solid $gray-lighter;
+    h2 {
+      width: 100%;
+      font-size: $font-size-l;
+      font-weight: $font-weight-regular;
+    }
+    button {
+      text-align: right;
+      background: transparent;
+      border: none;
+      font-size: 35px;
+      color: $gray;
+      margin-right: -30px;
+      cursor: pointer;
+    }
+  }
+
+  &__modal-body {
+    padding: 8px 12px;
+  }
+
+  &__modal-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    button {
+      cursor: pointer;
+      padding: 6px;
+      background: transparent;
+      border: none;
+      border-radius: $border-radius-post-btn;
+    }
+    button:hover {
+      background-color: $gray-light;
+    }
+    svg {
+      fill: $gray;
+    }
+    h2 {
+      color: $black-light;
+      font-size: $font-size-l;
+      font-weight: $font-weight-regular;
+    }
+  }
+
+  &__modal-info-details {
+    display: flex;
+    margin-bottom: 16px;
+    svg {
+      fill: $gray;
+    }
+    h3 {
+      color: $black-light;
+      font-size: $font-size-normal;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__modal-info-body {
+    margin-left: 20px;
+    a {
+      color: $blue-navy;
+      font-size: $font-size-s;
+      font-weight: $font-weight-semi-bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    span {
+      font-size: $font-size-s;
+    }
+  }
+}

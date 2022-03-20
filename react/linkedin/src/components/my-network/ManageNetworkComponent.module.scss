@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.wrapper-left {
+  &__connections {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    font-size: $font-size-m;
+    color: $gray;
+    &:hover {
+      background-color: $gray-dark;
+    }
+  }
+
+  &__connections-text {
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 15px;
+      font-size: $font-size-m;
+    }
+  }
+}
